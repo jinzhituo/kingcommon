@@ -1,7 +1,7 @@
 package com.zhuanbang.kingcommonlib.widget;
 
 /**
- * 作者：ZhengQunWei on 2017/10/10 10:39
+ * 作者：Jzt on 2019/5/10
  */
 public abstract class IPickViewData {
 

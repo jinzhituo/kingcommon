@@ -5,7 +5,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 /**
- * 作者：ZhengQunWei on 2018/6/29 14:39
+ * 作者：Jzt on 2019/5/10
  */
 public interface GlobalHttpHandler {
     Response onHttpResultResponse(String httpResult, Interceptor.Chain chain, Response response);

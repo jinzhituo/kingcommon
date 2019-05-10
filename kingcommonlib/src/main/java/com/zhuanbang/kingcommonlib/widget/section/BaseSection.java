@@ -2,7 +2,7 @@ package com.zhuanbang.kingcommonlib.widget.section;
 
 /**
  * RecyclerView悬停分割线数据基类
- * 作者：ZhengQunWei on 2018/8/7 10:17
+ * 作者：Jzt on 2019/5/10
  */
 public abstract class BaseSection<T> {
 

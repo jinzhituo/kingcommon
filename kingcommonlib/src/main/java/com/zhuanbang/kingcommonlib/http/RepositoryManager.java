@@ -14,7 +14,7 @@ import retrofit2.Retrofit;
 
 /**
  * 网络请求Service类管理（根据多BaseUrl设置可以实现不同BaseUrl的service）
- * 作者：ZhengQunWei on 2018/6/28 14:57
+ * 作者：Jzt on 2019/5/10
  */
 @Singleton
 public class RepositoryManager implements IRepositoryManager {

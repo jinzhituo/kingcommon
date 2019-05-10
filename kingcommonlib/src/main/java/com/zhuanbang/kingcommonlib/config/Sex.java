@@ -8,7 +8,7 @@ import java.lang.annotation.Target;
 import androidx.annotation.IntDef;
 
 /**
- * 作者：ZhengQunWei on 2018/12/14 13:34
+ * 作者：Jzt on 2019/5/10
  */
 public class Sex {
     /**

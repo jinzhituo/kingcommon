@@ -7,7 +7,7 @@ import com.zhuanbang.kingcommonlib.db.core.DBTable;
 import com.zhuanbang.kingcommonlib.widget.IPickViewData;
 
 /**
- * 作者：ZhengQunWei on 2017/9/19 14:19
+ * 作者：Jzt on 2019/5/10
  */
 @DBTable("district")
 public class District extends IPickViewData {

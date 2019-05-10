@@ -2,7 +2,7 @@ package com.zhuanbang.kingcommonlib.config;
 
 /**
  * 请求BaseUrl配置接口
- * 作者：ZhengQunWei on 2018/6/28 14:51
+ * 作者：Jzt on 2019/5/10
  */
 public interface HostUrlConfiguration {
     /**

@@ -4,7 +4,7 @@ import android.app.Activity;
 
 /**
  * 全局未登录请求处理
- * 作者：ZhengQunWei on 2018/7/11 16:08
+ * 作者：Jzt on 2019/5/10
  */
 public interface NeedLoginConfiguration {
 

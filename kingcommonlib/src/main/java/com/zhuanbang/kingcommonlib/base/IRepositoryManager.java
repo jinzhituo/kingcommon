@@ -2,7 +2,7 @@ package com.zhuanbang.kingcommonlib.base;
 
 
 /**
- * 作者：ZhengQunWei on 2018/6/28 13:34
+ * 作者：Jzt on 2019/5/10
  */
 public interface IRepositoryManager {
 

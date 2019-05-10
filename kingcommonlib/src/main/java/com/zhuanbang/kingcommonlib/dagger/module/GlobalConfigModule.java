@@ -20,7 +20,7 @@ import dagger.Provides;
 import okhttp3.Interceptor;
 
 /**
- * 作者：ZhengQunWei on 2018/6/29 13:08
+ * 作者：Jzt on 2019/5/10
  */
 @Module
 public class GlobalConfigModule {

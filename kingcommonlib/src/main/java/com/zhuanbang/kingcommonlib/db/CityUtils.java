@@ -8,7 +8,7 @@ import com.zhuanbang.kingcommonlib.db.model.District;
 import com.zhuanbang.kingcommonlib.db.model.Province;
 
 /**
- * 作者：ZhengQunWei on 2018/3/19 14:16
+ * 作者：Jzt on 2019/5/10
  */
 public class CityUtils {
     static Session<City> sCityDao;

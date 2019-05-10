@@ -4,7 +4,7 @@ import android.os.Environment;
 
 /**
  * 定义一些常量Key方便存储和读取数据时使用
- * 作者：ZhengQunWei on 2018/7/11 13:57
+ * 作者：Jzt on 2019/5/10
  */
 public class Constant {
     /**

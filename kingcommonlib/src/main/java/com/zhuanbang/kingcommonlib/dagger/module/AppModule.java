@@ -17,7 +17,7 @@ import dagger.Module;
 import dagger.Provides;
 
 /**
- * 作者：ZhengQunWei on 2018/6/29 11:24
+ * 作者：Jzt on 2019/5/10
  */
 @Module
 public class AppModule {

@@ -3,7 +3,7 @@ package com.zhuanbang.kingcommonlib.config;
 import okhttp3.OkHttpClient;
 
 /**
- * 作者：ZhengQunWei on 2018/6/29 14:41
+ * 作者：Jzt on 2019/5/10
  */
 public interface OkhttpConfiguration {
     /**

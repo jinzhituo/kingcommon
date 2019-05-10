@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * 服务器返回数据基本结构
- * 作者：ZhengQunWei on 2018/7/11 14:40
+ * 作者：Jzt on 2019/5/10
  */
 public class BaseResponse<T> implements Serializable {
     private int code;

@@ -3,7 +3,7 @@ package com.zhuanbang.kingcommonlib.widget.section;
 import android.graphics.Canvas;
 
 /**
- * 作者：ZhengQunWei on 2018/8/6 16:32
+ * 作者：Jzt on 2019/5/10
  */
 public interface SectionConvert<T> {
 

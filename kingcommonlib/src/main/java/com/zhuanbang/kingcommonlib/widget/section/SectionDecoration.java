@@ -19,7 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 /**
- * 作者：ZhengQunWei on 2018/8/6 16:31
+ * 作者：Jzt on 2019/5/10
  */
 public class SectionDecoration<T> extends RecyclerView.ItemDecoration {
     private static final String TAG = "SectionDecoration";

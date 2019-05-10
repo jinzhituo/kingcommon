@@ -4,7 +4,7 @@ import com.bumptech.glide.request.RequestOptions;
 
 /**
  * 图片加载配置使用Glide
- * 作者：ZhengQunWei on 2018/7/20 09:35
+ * 作者：Jzt on 2019/5/10
  */
 public interface ImageLoadOptionConfig {
 

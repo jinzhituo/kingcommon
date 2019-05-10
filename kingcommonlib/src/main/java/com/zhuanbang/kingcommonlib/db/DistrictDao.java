@@ -4,7 +4,7 @@ package com.zhuanbang.kingcommonlib.db;
 import com.zhuanbang.kingcommonlib.db.core.BaseDao;
 
 /**
- * 作者：ZhengQunWei on 2017/10/10 10:47
+ * 作者：Jzt on 2019/5/10
  */
 public class DistrictDao extends BaseDao {
     public String createDataBase() {

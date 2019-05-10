@@ -4,7 +4,7 @@ package com.zhuanbang.kingcommonlib.db;
 import com.zhuanbang.kingcommonlib.db.core.BaseDao;
 
 /**
- * 作者：ZhengQunWei on 2017/10/10 16:10
+ * 作者：Jzt on 2019/5/10
  */
 public class ShopCategoryDao extends BaseDao {
 
