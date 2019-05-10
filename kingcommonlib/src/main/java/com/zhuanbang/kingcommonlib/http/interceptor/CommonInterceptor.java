@@ -20,9 +20,6 @@ public class CommonInterceptor implements Interceptor {
         // 添加新的参数
         HttpUrl.Builder authorizedUrlBuilder = oldRequest.url().newBuilder().scheme(oldRequest.url().scheme()).host
                 (oldRequest.url().host());
-//                .addQueryParameter(Constant.APP_VERSION, ArmsUtils.getVersionCode()).addQueryParameter(Constant
-//                        .USER_ID, 27480 + "")
-//                .addQueryParameter(Constant.SESSION_ID, "A0B40324603CE8DBAF281AB0650410E1");
 
         // 新的请求
         Request newRequest = oldRequest.newBuilder().method(oldRequest.method(), oldRequest.body()).url

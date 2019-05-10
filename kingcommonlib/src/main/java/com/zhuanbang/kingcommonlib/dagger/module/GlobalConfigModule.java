@@ -48,7 +48,8 @@ public class GlobalConfigModule {
 
     @Singleton
     @Provides
-    @NonNull
+//    @NonNull
+    @Nullable
     NeedLoginConfiguration provideNeedConfiguration() {
         return mNeedLoginConfiguration;
     }
