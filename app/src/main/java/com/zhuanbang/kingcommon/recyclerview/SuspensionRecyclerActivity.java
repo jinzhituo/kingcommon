@@ -1,5 +1,7 @@
 package com.zhuanbang.kingcommon.recyclerview;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -16,7 +18,10 @@ import androidx.recyclerview.widget.RecyclerView;
 public class SuspensionRecyclerActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
-
+    public static void startAction(Context context) {
+        Intent intent = new Intent(context, SuspensionRecyclerActivity.class);
+        context.startActivity(intent);
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

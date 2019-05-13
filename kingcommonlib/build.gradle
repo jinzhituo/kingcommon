@@ -80,6 +80,7 @@ dependencies {
     api('com.alibaba.android:vlayout:1.0.3@aar') {
         transitive = true
     }
+    api 'com.lxj:xpopup:1.7.6-x'
     //canary
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.3'
     releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'
