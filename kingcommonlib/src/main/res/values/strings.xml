@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">kingcommonlib</string>
+    <string name="net_error">网络访问错误，请稍后再试</string>
+    <string name="empty">还没有数据哦</string>
+    <string name="loading">请稍后...</string>
+    <string name="reload">重新尝试</string>
+    <string name="no_net">网络不可用,请检查你的网络</string>
+    <string name="socket_time_out">请求网络超时</string>
+    <string name="data_format_error">数据解析错误</string>
+    <string name="message_denied">权限 \"%1$s\" 已被禁止,请去应用管理开启</string>
+    <string name="permission_denied">权限 \"%1$s\" 已被禁止,请去应用管理开启</string>
+    <string name="album_view">选择图片</string>
+    <string name="image_view">单击选择</string>
+    <string name="add">确定</string>
+    <string name="selected">已选</string>
+    <string name="limit_exceeded">最多能选 %d 张</string>
+    <string name="input_phone_err">请输入正确的手机号</string>
+    <string name="input_phone_null">请输入手机号</string>
+    <string name="input_pass_null">请输入密码</string>
+    <string name="input_pass_less">密码长度不能少于6位</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
 </resources>

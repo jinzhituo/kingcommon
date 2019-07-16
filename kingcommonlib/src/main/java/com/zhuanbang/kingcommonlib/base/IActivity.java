@@ -6,9 +6,6 @@ import com.zhuanbang.kingcommonlib.dagger.component.AppComponent;
 
 import androidx.annotation.NonNull;
 
-/**
- * 作者：ZhengQunWei on 2018/7/3 11:06
- */
 public interface IActivity {
 
     /**

@@ -2,10 +2,6 @@ package com.zhuanbang.kingcommonlib.base;
 
 import android.content.Context;
 
-/**
- * @author ZhengQunWei
- * @date on 2018/6/27
- */
 public interface IView {
 
     /**

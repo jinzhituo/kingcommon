@@ -1,8 +1,5 @@
 package com.zhuanbang.kingcommonlib.base;
 
-/**
- * 作者：ZhengQunWei on 2018/6/27 13:40
- */
 public interface IModel {
 
     /**

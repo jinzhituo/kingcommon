@@ -27,7 +27,6 @@ import androidx.annotation.Nullable;
 
 /**
  * 所有Activity管理类
- * 作者：ZhengQunWei on 2018/6/29 10:48
  */
 @Singleton
 public class AppManager {
@@ -64,7 +63,8 @@ public class AppManager {
                 showSnackbar((String) message.obj, message.arg1 == 0 ? false : true);
                 break;
             case NEED_LOGIN:
-                if (mNeedLoginConfiguration != null) mNeedLoginConfiguration.needLogin(getCurrentActivity());
+                if (mNeedLoginConfiguration != null)
+                    mNeedLoginConfiguration.needLogin(getCurrentActivity());
                 break;
             case KILL_ALL:
                 killAll();
@@ -87,9 +87,9 @@ public class AppManager {
      *
      * @return
      */
-    public  int getColorPrimaryDark() {
+    public int getColorPrimaryDark() {
         TypedValue typedValue = new TypedValue();
-        mCurrentActivity.getTheme().resolveAttribute(R.attr.colorPrimaryDark, typedValue, true);
+//        mCurrentActivity.getTheme().resolveAttribute(R.attr.colorPrimaryDark, typedValue, true);
         return typedValue.data;
     }
 

@@ -8,9 +8,6 @@ import com.zhuanbang.kingcommonlib.dagger.component.AppComponent;
 
 import androidx.annotation.NonNull;
 
-/**
- * 作者：ZhengQunWei on 2018/7/4 15:49
- */
 public interface IFragment {
     /**
      * 提供 AppComponent(提供所有的单例对象)给实现类,进行 Component 依赖

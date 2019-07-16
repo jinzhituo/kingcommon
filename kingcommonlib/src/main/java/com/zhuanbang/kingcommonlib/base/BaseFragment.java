@@ -33,7 +33,9 @@ import io.reactivex.subjects.BehaviorSubject;
 import io.reactivex.subjects.Subject;
 
 /**
- * 作者：ZhengQunWei on 2018/7/5 09:27
+ * Created by Android Studio.
+ * User: Zt丶
+ * Date: 2019/7/16 10:11
  */
 public abstract class BaseFragment<P extends IPresenter> extends Fragment implements IFragment,
         FragmentLifecycleable, TakePhoto.TakeResultListener, InvokeListener {

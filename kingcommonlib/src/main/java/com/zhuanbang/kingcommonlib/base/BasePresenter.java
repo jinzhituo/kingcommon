@@ -16,9 +16,11 @@ import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
 
 /**
- * 作者：ZhengQunWei on 2018/6/29 17:07
+ * Created by Android Studio.
+ * User: Zt丶
+ * Date: 2019/7/16 10:11
  */
-public class BasePresenter<M extends IModel, V extends IView> implements IPresenter, LifecycleObserver {
+public class BasePresenter<M extends IModel, V extends IView> extends BaseStateViewModel implements IPresenter, LifecycleObserver {
 
     protected final String TAG = this.getClass().getSimpleName();
     public Context mContext;

@@ -4,6 +4,10 @@ import android.app.Application;
 import android.content.Context;
 import android.os.Bundle;
 
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.RequestOptions;
+import com.zhuanbang.kingcommon.MainActivity;
+import com.zhuanbang.kingcommon.api.HostType;
 import com.zhuanbang.kingcommonlib.base.delegate.AppLifecycles;
 import com.zhuanbang.kingcommonlib.dagger.module.GlobalConfigModule;
 import com.zhuanbang.kingcommonlib.manager.ConfigModule;
@@ -21,15 +25,14 @@ public class GlobalConfig implements ConfigModule {
 
     @Override
     public void applyOptions(Context context, GlobalConfigModule.Builder builder) {
-//        builder.setHostUrlConfiguration(new HostType()).setNeedLoginConfiguration(LoginActivity::startAction)
-//                .setImageLoadOptionConfig(() -> new RequestOptions().placeholder(R.drawable
-//                        .ic_image_loading).error(R.drawable.ic_image_loading).centerCrop().skipMemoryCache(true)
-//                //跳过内存缓存
-//                .diskCacheStrategy(DiskCacheStrategy.ALL)    //缓存所有版本的图像
-//                .diskCacheStrategy(DiskCacheStrategy.NONE)    //跳过磁盘缓存
-//                .diskCacheStrategy(DiskCacheStrategy.DATA)    //只缓存原来分辨率的图片
-//                .diskCacheStrategy(DiskCacheStrategy.RESOURCE)    //只缓存最终的图片
-//        );
+        builder.setHostUrlConfiguration(new HostType()).setNeedLoginConfiguration(MainActivity::startAction)
+                .setImageLoadOptionConfig(() -> new RequestOptions().centerCrop().skipMemoryCache(true)
+                //跳过内存缓存
+                .diskCacheStrategy(DiskCacheStrategy.ALL)    //缓存所有版本的图像
+                .diskCacheStrategy(DiskCacheStrategy.NONE)    //跳过磁盘缓存
+                .diskCacheStrategy(DiskCacheStrategy.DATA)    //只缓存原来分辨率的图片
+                .diskCacheStrategy(DiskCacheStrategy.RESOURCE)    //只缓存最终的图片
+        );
 
     }
 

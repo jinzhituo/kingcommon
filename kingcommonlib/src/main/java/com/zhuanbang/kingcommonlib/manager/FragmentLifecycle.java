@@ -14,10 +14,6 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
-
-/**
- * 作者：ZhengQunWei on 2018/7/4 14:46
- */
 public class FragmentLifecycle extends FragmentManager.FragmentLifecycleCallbacks {
     private static final String TAG = "FragmentLifecycle";
 

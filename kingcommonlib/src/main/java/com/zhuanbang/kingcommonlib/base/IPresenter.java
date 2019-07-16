@@ -1,8 +1,5 @@
 package com.zhuanbang.kingcommonlib.base;
 
-/**
- * 作者：ZhengQunWei on 2018/6/28 13:30
- */
 public interface IPresenter {
 
     /**

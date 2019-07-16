@@ -20,4 +20,10 @@
         android:layout_height="wrap_content"
         android:text="XPopup Demo"/>
 
+    <Button
+        android:id="@+id/btn_rx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RX Demo"/>
+
 </LinearLayout>

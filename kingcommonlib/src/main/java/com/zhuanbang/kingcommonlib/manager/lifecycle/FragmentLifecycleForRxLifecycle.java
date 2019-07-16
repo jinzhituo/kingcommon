@@ -11,9 +11,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import io.reactivex.subjects.Subject;
 
-/**
- * 作者：ZhengQunWei on 2018/7/4 10:46
- */
 public class FragmentLifecycleForRxLifecycle extends FragmentManager.FragmentLifecycleCallbacks {
 
     @Override

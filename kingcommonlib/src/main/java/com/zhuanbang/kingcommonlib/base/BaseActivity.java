@@ -29,7 +29,9 @@ import io.reactivex.subjects.BehaviorSubject;
 import io.reactivex.subjects.Subject;
 
 /**
- * 作者：ZhengQunWei on 2018/7/5 10:23
+ * Created by Android Studio.
+ * User: Zt丶
+ * Date: 2019/7/16 10:11
  */
 public abstract class BaseActivity<P extends BasePresenter> extends AppCompatActivity implements IActivity,
         ActivityLifecycleable, TakePhoto.TakeResultListener, InvokeListener {

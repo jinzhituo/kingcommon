@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.zhuanbang.kingcommon.recyclerview.SuspensionRecyclerActivity;
+import com.zhuanbang.kingcommon.terminal.TerminalManagerActivity;
 import com.zhuanbang.kingcommon.xpopup.DemoActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,9 +27,8 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_xpopup).setOnClickListener(v -> {
             DemoActivity.startAction(MainActivity.this);
         });
-        findViewById(R.id.suspension_recycler).setOnClickListener(v -> {
-            SuspensionRecyclerActivity.startAction(MainActivity.this);
-        });
+        findViewById(R.id.suspension_recycler).setOnClickListener(v -> SuspensionRecyclerActivity.startAction(MainActivity.this));
+        findViewById(R.id.btn_rx).setOnClickListener(v -> TerminalManagerActivity.startAction(MainActivity.this));
     }
 
 }

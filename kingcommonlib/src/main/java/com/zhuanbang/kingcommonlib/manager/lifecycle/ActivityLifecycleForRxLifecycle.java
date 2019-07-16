@@ -13,9 +13,6 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import io.reactivex.subjects.Subject;
 
-/**
- * 作者：ZhengQunWei on 2018/7/4 10:39
- */
 @Singleton
 public class ActivityLifecycleForRxLifecycle implements Application.ActivityLifecycleCallbacks {
 
