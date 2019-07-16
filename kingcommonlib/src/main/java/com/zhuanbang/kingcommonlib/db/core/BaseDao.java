@@ -13,9 +13,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-/**
- * 作者：ZhengQunWei on 2017/9/29 09:55
- */
 public abstract class BaseDao<T> implements IBaseDao<T> {
     private SQLiteDatabase mSQLiteDatabase;
     private boolean isInit = false;

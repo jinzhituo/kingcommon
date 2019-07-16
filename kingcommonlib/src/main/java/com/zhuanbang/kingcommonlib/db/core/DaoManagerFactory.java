@@ -15,9 +15,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
-/**
- * 作者：ZhengQunWei on 2017/9/29 09:48
- */
 public class DaoManagerFactory {
     private AtomicInteger mOpenCounter = new AtomicInteger();
     private String path;

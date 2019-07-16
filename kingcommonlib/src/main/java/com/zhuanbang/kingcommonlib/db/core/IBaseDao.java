@@ -2,9 +2,6 @@ package com.zhuanbang.kingcommonlib.db.core;
 
 import java.util.List;
 
-/**
- * 作者：ZhengQunWei on 2017/9/29 09:45
- */
 public interface IBaseDao<T> {
     /**
      * 插入对象到数据库接口
