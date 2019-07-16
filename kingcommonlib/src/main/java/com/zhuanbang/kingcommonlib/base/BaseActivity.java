@@ -51,7 +51,6 @@ public abstract class BaseActivity<P extends BasePresenter> extends AppCompatAct
         return mLifecycleSubject;
     }
 
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

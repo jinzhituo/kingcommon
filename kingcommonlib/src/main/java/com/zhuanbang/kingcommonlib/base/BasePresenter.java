@@ -20,7 +20,7 @@ import io.reactivex.disposables.Disposable;
  * User: Zt丶
  * Date: 2019/7/16 10:11
  */
-public class BasePresenter<M extends IModel, V extends IView> extends BaseStateViewModel implements IPresenter, LifecycleObserver {
+public class BasePresenter<M extends IModel, V extends IView> extends BaseStateViewModel implements IPresenter, LifecycleObserver, BaseStateViewModel.CallBack {
 
     protected final String TAG = this.getClass().getSimpleName();
     public Context mContext;
@@ -65,6 +65,7 @@ public class BasePresenter<M extends IModel, V extends IView> extends BaseStateV
         if (useEventBus())//如果要使用 Eventbus 请将此方法返回 true
             EventBus.getDefault().register(this);//注册 Eventbus
         Log.i("EventBus", "onStart: " + getClass().getName());
+        attach(this);
     }
 
     @Override
@@ -79,6 +80,7 @@ public class BasePresenter<M extends IModel, V extends IView> extends BaseStateV
         mCompositeDisposable = null;
         mModel = null;
         mContext = null;
+        detach();
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
@@ -110,5 +112,15 @@ public class BasePresenter<M extends IModel, V extends IView> extends BaseStateV
         if (mCompositeDisposable != null) {
             mCompositeDisposable.clear();//保证Activity结束时取消所有正在执行的订阅
         }
+    }
+
+    @Override
+    public void onFailure(Throwable e) {
+
+    }
+
+    @Override
+    public void onReload() {
+
     }
 }

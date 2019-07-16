@@ -18,6 +18,8 @@ import androidx.databinding.Bindable;
 public class BaseStateViewModel extends BaseObservable {
     private Context mContext = BaseApplication.getAppContext();
 
+    private CallBack mCallBack;
+
     @StateEnum
     private int emptyState = StateEnum.STATUS_NORMAL;
 
@@ -62,6 +64,36 @@ public class BaseStateViewModel extends BaseObservable {
 
     public boolean isEmpty() {
         return this.emptyState != StateEnum.STATUS_NORMAL;
+    }
+
+    // 显示重新加载
+    public boolean isNetError() {
+        return this.emptyState == StateEnum.STATUS_ERROR_NET;
+    }
+
+    //重新加载
+    public void reload() {
+        if (mCallBack != null) {
+            mCallBack.onReload();
+        }
+    }
+
+    public void attach(CallBack callBack) {
+        mCallBack = callBack;
+    }
+
+    public void detach() {
+        if (mCallBack != null)
+            this.mCallBack = null;
+    }
+
+    //使用回调处理错误及重新加载事件
+    public interface CallBack {
+        //失败
+        public void onFailure(Throwable e);
+
+        //重新加载
+        public void onReload();
     }
 
     /**

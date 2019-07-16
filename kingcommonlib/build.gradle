@@ -69,6 +69,8 @@ dependencies {
     api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.34'
     // multidex
     implementation 'androidx.multidex:multidex:2.0.1'
+    //选择器
+    implementation 'com.contrarywind:Android-PickerView:4.1.8'
     //图片选择
     api('org.devio.takephoto:takephoto_library:4.1.0', {
         exclude group: 'io.reactivex'
