@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
+import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
 import com.trello.rxlifecycle2.android.ActivityEvent;
@@ -44,6 +46,8 @@ public abstract class BaseActivity<P extends BasePresenter> extends AppCompatAct
     private TakePhoto takePhoto;
     protected Context mContext;
     private InvokeParam invokeParam;
+
+    private boolean isAutoHideKeyboard = false;
 
     @NonNull
     @Override
@@ -158,6 +162,25 @@ public abstract class BaseActivity<P extends BasePresenter> extends AppCompatAct
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         getTakePhoto().onActivityResult(requestCode, resultCode, data);
         super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        switch (ev.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                if (isAutoHideKeyboard) {
+                    View view = getCurrentFocus();
+                    showKeyboard(false);
+                }
+                break;
+            default:
+                break;
+        }
+        return super.dispatchTouchEvent(ev);
+    }
+
+    public void setAutoHideKeyboard(boolean autoHideKeyboard) {
+        isAutoHideKeyboard = autoHideKeyboard;
     }
 
     /**

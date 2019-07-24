@@ -11,6 +11,7 @@ import com.zhuanbang.kingcommonlib.http.GlobalHttpHandler;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.inject.Named;
 import javax.inject.Singleton;
 
 import androidx.annotation.NonNull;
@@ -18,6 +19,7 @@ import androidx.annotation.Nullable;
 import dagger.Module;
 import dagger.Provides;
 import okhttp3.Interceptor;
+
 
 /**
  * 作者：Jzt on 2019/5/10
@@ -27,6 +29,7 @@ public class GlobalConfigModule {
     private HostUrlConfiguration mHostUrlConfiguration;
     private GsonConfiguration mGsonConfiguration;
     private List<Interceptor> mInterceptorList;
+    private Interceptor mInterceptor;
     private OkhttpConfiguration mOkhttpConfiguration;
     private GlobalHttpHandler mGlobalHttpHandler;
     private NeedLoginConfiguration mNeedLoginConfiguration;
@@ -36,6 +39,7 @@ public class GlobalConfigModule {
         this.mHostUrlConfiguration = builder.mHostUrlConfiguration;
         this.mGsonConfiguration = builder.mGsonConfiguration;
         this.mInterceptorList = builder.mInterceptorList;
+        this.mInterceptor = builder.mInterceptor;
         this.mOkhttpConfiguration = builder.mOkhttpConfiguration;
         this.mGlobalHttpHandler = builder.mGlobalHttpHandler;
         this.mNeedLoginConfiguration = builder.mNeedLoginConfiguration;
@@ -48,8 +52,7 @@ public class GlobalConfigModule {
 
     @Singleton
     @Provides
-//    @NonNull
-    @Nullable
+    @NonNull
     NeedLoginConfiguration provideNeedConfiguration() {
         return mNeedLoginConfiguration;
     }
@@ -73,6 +76,15 @@ public class GlobalConfigModule {
     @Nullable
     List<Interceptor> provideInterceptors() {
         return mInterceptorList;
+    }
+
+    @Named("CommInterceptor")
+    @Singleton
+    @Provides
+    @Nullable
+    Interceptor provideInterceptor() {
+//        return mInterceptor != null ? mInterceptor : new CommonInterceptor();
+        return mInterceptor;
     }
 
     @Singleton
@@ -105,6 +117,7 @@ public class GlobalConfigModule {
         private HostUrlConfiguration mHostUrlConfiguration;
         private GsonConfiguration mGsonConfiguration;
         private List<Interceptor> mInterceptorList;
+        private Interceptor mInterceptor;
         private OkhttpConfiguration mOkhttpConfiguration;
         private GlobalHttpHandler mGlobalHttpHandler;
         private NeedLoginConfiguration mNeedLoginConfiguration;
@@ -123,6 +136,11 @@ public class GlobalConfigModule {
         public Builder setInterceptorList(List<Interceptor> interceptorList) {
             if (mInterceptorList == null) mInterceptorList = new ArrayList<>();
             this.mInterceptorList.addAll(interceptorList);
+            return this;
+        }
+
+        public Builder setInterceptor(Interceptor interceptor) {
+            this.mInterceptor = interceptor;
             return this;
         }
 

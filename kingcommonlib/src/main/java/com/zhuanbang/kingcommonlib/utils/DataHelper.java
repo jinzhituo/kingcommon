@@ -207,6 +207,68 @@ public class DataHelper {
     }
 
     /**
+     * 将对象储存到sharepreference
+     *
+     * @param key
+     * @param device
+     * @param <T>
+     */
+    public static <T> boolean saveObjectData(Context context, String key, T object) {
+        if (mSharedPreferences == null) {
+            mSharedPreferences = context.getSharedPreferences(SP_NAME, Context.MODE_PRIVATE);
+        }
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        try {   //Device为自定义类
+            // 创建对象输出流，并封装字节流
+            ObjectOutputStream oos = new ObjectOutputStream(baos);
+            // 将对象写入字节流
+            oos.writeObject(object);
+            // 将字节流编码成base64的字符串
+            String oAuth_Base64 = new String(Base64.encode(baos.toByteArray(), Base64.DEFAULT));
+            mSharedPreferences.edit().putString(key, oAuth_Base64).apply();
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    /**
+     * 将对象从shareprerence中取出来
+     *
+     * @param key
+     * @param <T>
+     * @return
+     */
+    public static <T> T getObjectData(Context context, String key) {
+        if (mSharedPreferences == null) {
+            mSharedPreferences = context.getSharedPreferences(SP_NAME, Context.MODE_PRIVATE);
+        }
+        T device = null;
+        String productBase64 = mSharedPreferences.getString(key, null);
+
+        if (productBase64 == null) {
+            return null;
+        }
+        // 读取字节
+        byte[] base64 = Base64.decode(productBase64.getBytes(), Base64.DEFAULT);
+
+        // 封装到字节流
+        ByteArrayInputStream bais = new ByteArrayInputStream(base64);
+        try {
+            // 再次封装
+            ObjectInputStream bis = new ObjectInputStream(bais);
+
+            // 读取对象
+            device = (T) bis.readObject();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return device;
+    }
+
+    /**
      * 返回缓存文件夹
      */
     public static File getCacheFile(Context context) {

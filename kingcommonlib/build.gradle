@@ -30,6 +30,7 @@ android {
     dataBinding {
         enabled = true
     }
+
 }
 
 dependencies {
@@ -87,9 +88,17 @@ dependencies {
         transitive = true
     }
     api 'com.lxj:xpopup:1.7.6-x'
+    //SuperTextView
+    api 'com.github.lygttpod:SuperTextView:2.2.4'
     //canary
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.3'
     releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'
     // Optional, if you use support library fragments:
     debugImplementation 'com.squareup.leakcanary:leakcanary-support-fragment:1.6.3'
+
+    //下拉刷新
+    api 'com.github.xuexiangjys.SmartRefreshLayout:refresh-header:1.1.5'
+    api 'com.github.xuexiangjys.SmartRefreshLayout:refresh-layout:1.1.5'
+    //侧滑
+    api "com.daimajia.swipelayout:library:1.2.0@aar"
 }

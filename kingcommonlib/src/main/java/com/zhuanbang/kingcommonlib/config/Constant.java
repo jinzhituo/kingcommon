@@ -8,9 +8,13 @@ import android.os.Environment;
  */
 public class Constant {
     /**
-     * 用户id常量key
+     * 用户id常量key-
      */
     public static final String USER_ID = "userId";
+    /**
+     * 用户信息常量key-
+     */
+    public static final String USER_INFO = "userInfo";
 
     /**
      * 用户sessionId
