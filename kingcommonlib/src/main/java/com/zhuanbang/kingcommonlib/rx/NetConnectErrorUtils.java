@@ -60,17 +60,7 @@ public class NetConnectErrorUtils {
 //                         .dismissOnTouchOutside(false)
                 // 设置弹窗显示和隐藏的回调监听
 //                         .autoDismiss(false)
-                .setPopupCallback(new XPopupCallback() {
-                    @Override
-                    public void onShow() {
-                        Log.e("tag", "onShow");
-                    }
-
-                    @Override
-                    public void onDismiss() {
-                        Log.e("tag", "onDismiss");
-                    }
-                }).asConfirm("提醒", "当前网络无法访问，请在系统设置中开启Wifi或者蜂窝数据," + "并且确认" + mContext.getString(R.string.app_name) + "有网络访问的权限！",
+                .asConfirm("提醒", "当前网络无法访问，请在系统设置中开启Wifi或者蜂窝数据," + "并且确认" + mContext.getString(R.string.app_name) + "有网络访问的权限！",
                         "取消", "确定",
                         new OnConfirmListener() {
                             @Override

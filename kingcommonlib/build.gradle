@@ -87,7 +87,7 @@ dependencies {
     api('com.alibaba.android:vlayout:1.0.3@aar') {
         transitive = true
     }
-    api 'com.lxj:xpopup:1.7.6-x'
+    api 'com.lxj:xpopup:1.8.7'
     //SuperTextView
     api 'com.github.lygttpod:SuperTextView:2.2.4'
     //canary
