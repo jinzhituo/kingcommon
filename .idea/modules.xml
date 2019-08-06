@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/kingcommon.iml" filepath="$PROJECT_DIR$/kingcommon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kingcommonlib/kingcommonlib.iml" filepath="$PROJECT_DIR$/kingcommonlib/kingcommonlib.iml" />
     </modules>
   </component>
 </project>
