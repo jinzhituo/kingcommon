@@ -11,12 +11,35 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }
+
+    signingConfigs {
+        release {
+            storeFile file('/Users/zt/Desktop/android/yungou.jks')
+            keyAlias 'yungou'
+            keyPassword 'yimi2015yuwei'
+            storePassword 'yimi2015yuwei'
+        }
+
+        debug {
+            keyAlias 'yungou'
+            keyPassword 'yimi2015yuwei'
+            storeFile file('/Users/zt/Desktop/android/yungou.jks')
+            storePassword 'yimi2015yuwei'
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+
+        debug {
+            signingConfig signingConfigs.release
+            debuggable true
+        }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8

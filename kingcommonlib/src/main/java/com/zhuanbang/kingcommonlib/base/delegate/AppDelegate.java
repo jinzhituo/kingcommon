@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.util.LruCache;
 
+import com.squareup.leakcanary.LeakCanary;
 import com.zhuanbang.kingcommonlib.base.IApplication;
 import com.zhuanbang.kingcommonlib.dagger.component.AppComponent;
 import com.zhuanbang.kingcommonlib.dagger.component.DaggerAppComponent;
@@ -96,8 +97,9 @@ public class AppDelegate implements IApplication, AppLifecycles {
         mAppComponent.cache().put(ConfigModule.class.getName(), mModules);
         this.mModules = null;
 
-        if (isApkInDebug(mApplication))
-//            LeakCanary.install(application);
+        if (isApkInDebug(mApplication)){
+            LeakCanary.install(application);
+        }
 
         mApplication.registerActivityLifecycleCallbacks(mActivityLifecycle);
         mApplication.registerActivityLifecycleCallbacks(mActivityLifecycleForRxLifecycle);
