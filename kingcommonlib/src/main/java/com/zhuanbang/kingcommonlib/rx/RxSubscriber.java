@@ -81,7 +81,7 @@ public abstract class RxSubscriber<T> implements Observer<T> {
                 e.printStackTrace();
             }
         } else if (showDelayDialog) {
-            Observable.timer(3, TimeUnit.SECONDS)
+            Observable.timer(2, TimeUnit.SECONDS)
                     .subscribeOn(AndroidSchedulers.mainThread())
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(new Observer<Long>() {

@@ -3,6 +3,7 @@ package com.zhuanbang.kingcommonlib.utils;
 import android.text.TextUtils;
 
 import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.regex.Pattern;
 
 /**
@@ -224,5 +225,16 @@ public class RegexUtils {
     public static String formatDouble2MoneyStr(double money) {
         DecimalFormat decimalFormat = new DecimalFormat(",##0.00");
         return decimalFormat.format(money);
+    }
+
+    /**
+     * 格式化float数字
+     *
+     * @param money
+     * @return
+     */
+    public static String formatFloat2Str(Float money) {
+        NumberFormat nf = new DecimalFormat("#.#");
+        return nf.format(money);
     }
 }

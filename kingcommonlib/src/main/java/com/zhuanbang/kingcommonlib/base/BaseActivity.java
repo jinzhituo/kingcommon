@@ -25,6 +25,7 @@ import javax.inject.Inject;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import io.reactivex.subjects.BehaviorSubject;
@@ -209,6 +210,17 @@ public abstract class BaseActivity<P extends BasePresenter> extends AppCompatAct
                 //无焦点关闭
                 imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
             }
+        }
+    }
+
+    /**
+     * 关闭软键盘
+     */
+    protected void hideInput() {
+        InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+        View view = getWindow().peekDecorView();
+        if (null != view) {
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
         }
     }
 

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            xmlns:tools="http://schemas.android.com/tools"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                             >
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/ic_wrong"
+        app:layout_constraintBottom_toBottomOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/btn_retry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:lineSpacingExtra="@dimen/dp_4"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="网络连接失败\n请检测网络后，点击重试!"
+        android:textSize="16sp"
+        android:textColor="@color/black_6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
