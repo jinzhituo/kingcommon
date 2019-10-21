@@ -170,8 +170,7 @@ public abstract class BaseActivity<P extends BasePresenter> extends AppCompatAct
         switch (ev.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 if (isAutoHideKeyboard) {
-                    View view = getCurrentFocus();
-                    showKeyboard(false);
+                    hideInput();
                 }
                 break;
             default:
