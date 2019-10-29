@@ -831,7 +831,7 @@ public class DeviceUtils {
      * @param context
      * @return
      */
-    private static String getDeviceInfo(Context context) {
+    public static String getDeviceInfo(Context context) {
         StringBuilder deviceId = new StringBuilder();
         // 渠道标志
         deviceId.append("a_");
